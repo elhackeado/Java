@@ -4,8 +4,9 @@ class bank
 	int account;
 	String name;
 	int balance;
+	int input;
 	
-	BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+	static BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
 	
 	void set() throws Exception
 	{
@@ -26,23 +27,35 @@ class bank
 		
 	}
 	
+	void deposit() throws Exception
+	{
+		System.out.println("Enter the account number: ");
+		input= Integer.parseInt(br.readLine());
+		
+	}
+	
 	
 	public static void main(String args[]) throws Exception
 	{
-		bank a= new bank();
+		
 		bank b[] = new bank[3];
-		int i;
-		for(i=0;i<b.length;i++)
+		for(int i=0;i<b.length;i++)
 		{
 			b[i]= new bank();
 			b[i].set();
 		}
-		    
-		System.out.print("Enter any number::");
-		int inp= Integer.parseInt(a.br.readLine());
-		i=inp;
-		b[i].show();
-	
+		while(true)    
+		{
+		System.out.print("Enter Your Acount Number::");
+		int inp= Integer.parseInt(br.readLine());
+		for(int i=0;i<b.length;i++)
+		{
+		if(inp==b[i].account)
+			b[i].show();
+		
+		}
+		}
+		
 	
 	}
 	
