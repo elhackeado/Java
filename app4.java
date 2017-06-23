@@ -61,5 +61,4 @@ public class app4 extends Applet
 			repaint();
 			
 		}
-		
-}
+	}	
