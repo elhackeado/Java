@@ -1,0 +1,11 @@
+import java.applet.*;
+import java.awt.*;
+
+public class app extends Applet
+{
+	String msg;
+		public void init()
+		{
+			
+		}
+}
